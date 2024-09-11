@@ -1,0 +1,28 @@
+LIST ALL TRIPLES IN A GRAPH
+SELECT * WHERE {
+  GRAPH <http://data.oup.com/taxonomy/Series/thesaurus> {
+    ?s ?p ?o}
+}
+
+LIST ALL TRIPLES IN A GRAPH WITH SPECIFIC Subject and Object
+SELECT * WHERE {
+  GRAPH <http://data.oup.com/taxonomy/Series/thesaurus> {
+    ?s ?p <http://data.oup.com/taxonomy/Series>.
+  <http://data.oup.com/taxonomy/Series> ?p1 ?o.}
+}
+
+DELETE AND INSERT TRIPLES
+WITH <http://data.oup.com/taxonomy/Series/thesaurus>
+DELETE {
+	<http://data.oup.com/taxonomy/Series> ?p1 ?o.
+	?s ?p2 <http://data.oup.com/taxonomy/Series>.
+}
+INSERT {
+	<http://data.oup.com/taxonomy/Series/0> ?p1 ?o.
+	?s ?p2 <http://data.oup.com/taxonomy/Series/0>.
+}
+WHERE  { 
+        <http://data.oup.com/taxonomy/Series> ?p1 ?o.
+        ?s ?p2 <http://data.oup.com/taxonomy/Series>.
+}
+

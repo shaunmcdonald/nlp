@@ -1,0 +1,6 @@
+INSERT DATA {<http://oxfordindex.oup.com/metadata/10.1093/oi/authority.12test12> a oup:Authority.}
+
+INSERT DATA {<http://oxfordindex.oup.com/metadata/10.1093/oi/authority.12test12> a oup:Authority.
+             <http://oxfordindex.oup.com/metadata/10.1093/oi/authority.34test34> a oup:Authority.}
+
+DESCRIBE <http://oxfordindex.oup.com/metadata/10.1093/oi/authority.12test12>
